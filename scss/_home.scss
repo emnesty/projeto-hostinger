@@ -1,8 +1,89 @@
 .s-hero {
-    background-color: $purple;
-    margin-top: 11.9rem;
-    padding-top: 3.9rem;
-    .container {
-        @include flex(row, center, space-between)
+  background-color: $purple;
+  margin-top: 11.9rem;
+  padding-top: 3.9rem;
+  .container {
+    @include flex(row, flex-start, space-between);
+  }
+  .text {
+    width: 100%;
+    max-width: 55rem;
+    h1 {
+      font-weight: bold;
+      font-size: 4.8rem;
+      line-height: 120%;
+      color: $white;
+      margin-bottom: 1.6rem;
     }
+    p {
+      font-size: 1.8rem;
+      line-height: 150%;
+      color: white;
+      max-width: 48.8rem;
+      margin-bottom: 3.2rem;
+    }
+    button {
+      @include style-btn(5.4rem, $yellow, #52328f);
+      margin-bottom: 8.6rem;
+    }
+    .conheca {
+      display: flex;
+      align-items: center;
+      .icon {
+        width: 4.2rem;
+        height: 4.2rem;
+        background-color: rgba(123, 90, 186, 0.4);
+        border-radius: 0.6rem;
+        @include flex(row, center, center);
+      }
+      span {
+        font-weight: bold;
+        font-size: 1.6rem;
+        line-height: 1.9rem;
+        color: white;
+        margin-left: 1.6rem;
+      }
+    }
+  }
+  .image {
+    position: relative;
+    top: 3.4rem;
+  }
+  @include responsive(991px) {
+    .container {
+      flex-direction: column;
+    }
+
+    .text {
+      max-width: 100%;
+      margin-bottom: 3rem;
+      h1 {
+        text-align: center;
+      }
+      p {
+        max-width: 100%;
+        text-align: center;
+      }
+      button {
+        margin: 0 auto;
+        margin-bottom: 4rem;
+        display: block;
+      }
+      .conheca {
+        justify-content: center;
+      }
+    }
+  }
+  @include responsive(600px) {
+    padding-top: 2.5rem;
+    margin-top: 8rem;
+    .text {
+      h1 {
+        font-size: 4.3rem;
+      }
+    }
+    .image {
+      left: -0.9rem;
+    }
+  }
 }
