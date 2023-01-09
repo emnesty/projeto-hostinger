@@ -1,29 +1,29 @@
 @mixin responsive($ScreenWidth) {
-    @media(max-width: $ScreenWidth) {
-        @content;
-    }
+  @media (max-width: $ScreenWidth) {
+    @content;
+  }
 }
 
 @mixin flex($direction, $align, $jusfity) {
-    display: flex;
-    flex-direction: $direction;
-    align-items: $align;
-    justify-content: $jusfity;
+  display: flex;
+  flex-direction: $direction;
+  align-items: $align;
+  justify-content: $jusfity;
 }
 
 @mixin style-btn($height, $bg, $color-Text) {
-    display: inline-block;
-    height: $height;
-    line-height: $height;
-    background-color: $bg;
-    border-radius: 0.6rem;
-    padding: 0px 5rem;
-    font-weight: bold;
-    font-size: 1.6rem;
-    cursor: pointer;
-    transition: all 0.3s;
-    &:hover {
-        background-color: $color-Text;
-        color: $bg;
-    }
+  display: inline-block;
+  height: $height;
+  line-height: $height;
+  background-color: $bg;
+  border-radius: 0.6rem;
+  padding: 0px 5rem;
+  font-weight: bold;
+  font-size: 1.6rem;
+  cursor: pointer;
+  transition: all 0.3s;
+  &:hover {
+    background-color: $color-Text;
+    color: $bg;
+  }
 }
