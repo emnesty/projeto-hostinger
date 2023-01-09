@@ -1,0 +1,8 @@
+.s-hero {
+    background-color: $purple;
+    margin-top: 11.9rem;
+    padding-top: 3.9rem;
+    .container {
+        @include flex(row, center, space-between)
+    }
+}
